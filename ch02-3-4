@@ -1,1 +1,2 @@
 SELECT * FROM sample21 WHERE birthday=NULL;
+SELECT * FROM sample21 WHERE birthday IS NULL;
