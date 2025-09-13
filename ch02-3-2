@@ -1,0 +1,3 @@
+SELECT * FROM sample21;
+SELECT * FROM sample21 WHERE no=2;
+SELECT * FROM sample21 WHERE no<>2;
