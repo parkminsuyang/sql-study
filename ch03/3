@@ -1,0 +1,5 @@
+SELECT * FROM sample33;
+SELECT * FROM sample33 LIMIT 3; #상위 3개만
+SELECT * FROM sample33 ORDER BY no DESC LIMIT 3; #내림차순 정렬 상위 3개만
+SELECT TOP 3 * FROM sample33; #SQL Server
+SELECT * FROM sample33 WHERE ROWNUM<=3; #Oracle
