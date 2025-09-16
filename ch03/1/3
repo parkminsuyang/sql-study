@@ -1,0 +1,2 @@
+SELECT * FROM sample311;
+SELECT * FROM sample311 ORDER BY a; #a열(문자열형)을 오름차순으로 정렬
