@@ -1,0 +1,4 @@
+SELECT * FROM sample34;
+SELECT *, price * quantity FROM sample34; # price*quantity
+SELECT *, price * quantity AS amount FROM sample34; # price*quantity의 별명을 amount로 나타냄
+SELECT *, price * quantity AS amount FROM sample34 WHERE price*quantity>=2000;
