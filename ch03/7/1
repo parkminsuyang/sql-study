@@ -1,0 +1,3 @@
+SELECT a FROM sample37;
+SELECT a, CASE WHEN a IS NULL THEN 0 ELSE a END "a(null=0" FROM sample37; #null일 경우 0 반환/아닐 경우 a열 값 반환
+SELECT a, COALESCE(a,0) FROM sample37; #null이 아니면 a, null이면 0
