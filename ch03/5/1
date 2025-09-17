@@ -1,0 +1,2 @@
+SELECT * FROM sample35;
+SELECT CONCAT(quantity, unit) FROM sample35; #quantity열과 unit열이 합쳐져서 CONCAT(quantity, unit)열로 표
