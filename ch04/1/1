@@ -1,0 +1,4 @@
+select * from sample41;
+desc sample41; #테이블의 열 구성 확인
+insert into sample41 values(1,'abc','2014-01-25'); #열 구성에 맞춰 행 추가
+select * from sample41; #행 추가 확인
