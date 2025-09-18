@@ -1,0 +1,6 @@
+select * from sample41;
+update sample41 set no=no+1, a=no; #no증가 후 a에 no할당
+select * from sample41
+
+update sample41 set a=no, no=no+1; #a에 no할당 후 no 증가
+select * from sample41
