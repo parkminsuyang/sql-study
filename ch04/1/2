@@ -1,0 +1,2 @@
+insert into sample41(a,no) values('xyz',2); #a열에 'xyz', no열에 2 추가
+insert into sample41(no,a,b) values(3,null,null) #no열은 not null제약 있음
