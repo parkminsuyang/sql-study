@@ -1,0 +1,6 @@
+desc sample411;
+insert into sample411(no,d) values(1,1);
+select * from sample411;
+
+insert into sample411(no) values(3); #d는 디폴드값으로 추가됨
+select * from sample411;
