@@ -1,0 +1,6 @@
+select * from sample41;
+update sample41 set b='2014-09-07' where no=2; #no=2인 행의 b값을 '2014-09-07'로 업데이트
+
+select * from sample41;
+UPDATE sample41 set no=no+1; #모든 행의 no값을 1 추가
+select * from sample41;
