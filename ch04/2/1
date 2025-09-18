@@ -1,0 +1,3 @@
+select * from sample41;
+delete from sample41 where no=3; #where 조건식 생략할 경우 전체 삭제
+select * from sample41;
