@@ -1,0 +1,2 @@
+update sample41 set a=null; #만약 not null제약이 있을 경우 불가능
+select * from sample41;
