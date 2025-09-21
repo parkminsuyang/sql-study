@@ -1,0 +1,6 @@
+select * from sample51;
+select count(*) from sample51; #전체 열의 행 개수 count
+
+select * from sample51 where name='A';
+select count(*) from sample51 where name='A'; #where이 count보다 먼저 처리됨
+
