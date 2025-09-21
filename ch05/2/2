@@ -1,0 +1,3 @@
+select * from sample51;
+select avg(quantity), sum(quantity)/count(quantity) from sample51;
+select avg(case when quantity is null then 0 else quantity end) as avgnull0 from sample51; #null을 0으로 변환해서 평균
