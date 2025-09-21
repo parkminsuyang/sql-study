@@ -1,0 +1,2 @@
+select * from sample51;
+select count(no), count(name) from sample51; #NULL 값은 집계되지 않음
