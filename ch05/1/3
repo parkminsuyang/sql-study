@@ -1,0 +1,2 @@
+select all name from sample51;
+select distinct name from sample51; #중복을 제거하여 반환
