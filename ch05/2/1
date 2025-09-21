@@ -1,0 +1,2 @@
+select * from sample51;
+select sum(quantity) from sample51; #quantity열의 합 반환
