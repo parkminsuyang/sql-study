@@ -1,0 +1,2 @@
+select * from sample51;
+select min(quantity), max(quantity), min(name), max(name) from sample51;
