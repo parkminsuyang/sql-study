@@ -1,0 +1,16 @@
+select * from sample551;
+select * from sample552;
+update sample551 set a='있음' where
+  exists (select * from sample552 where no2 = no); #no2값이 있는 것만 있음으로 바꿈
+select * from sample551;
+
+
+update sample551 set a='없음' where
+  not exists (select * from sample552 where no2=no); #no2값이 없는 것만 없음으로 바꿈
+select * from sample551; 
+
+update sample551 set a='있음' where
+  exists (select * from sample552 where sample552.no2 = sample551.no); #열에 테이블명 붙임
+
+select * from sample551 where no in(3,5); #왼쪽 값과 같은 값이 집합 안에 존재하면 참 반환
+select * from sample551 where no in (select no2 from sample552); #집합을 서브쿼리로 나타냄
