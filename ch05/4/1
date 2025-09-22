@@ -1,0 +1,33 @@
+select * from sample54;
+select min(a) from sample54;
+
+delete from sample54 where a=(select min(a) from sample54); #mysql에선 에러 발생
+delete from sample54 where a=(select a from (select min(a) as a from sample54) as x); #인라인 뷰로 임시 테이브 ㄹ만들어 에러 방지
+
+select min(a) from sample54; #하나의 값(스칼라값) 반환
+select no from sample54; #복수의 행, 하나의 열 반환
+select min(a), max(no) from sample54; # 하나의 행, 복수의 열 반환
+select no, a from sample54; # 복수의 행, 복수의 열 반환
+
+select
+  (select count(*) from sample51) as sq1, #sample51의 테이블 행 개수
+  (select count(*) from sample54) as sq2; #sample54의 테이블 행 개수
+
+update sampe54 set a=(select max(a) from sample54);
+
+select * from (select * from sample54) sq;
+select * from (select * from sample54) as sq; #as로 별명 지정
+select * from (select * from (select * from sample54) sq1) sq2; #3단계 중첩 구조로도 사용 가능
+
+select * from (
+    select * from sample54 order by a desc
+    )sq
+    where rownum<=2; #서브쿼리를 활용하여 Oracle에서도 상위n건 반환하는 행 제한 가능
+
+insert into sample541 values(
+   (select count(*) from sample51),
+   (select count(*) from sample54)
+   ); #values구에 서브쿼리를 사용하여 insert명령 수행
+
+ insert into sample541 select 1,2; #values구 대신 select명령 사용
+ 
