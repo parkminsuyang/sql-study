@@ -1,0 +1,35 @@
+create table sample62(
+  no integer not null,
+  a varchar(30),
+  d date);
+
+desc sample62; #no, a, d열을 가진 테이블을 만
+
+alter table sample62 add newcol integer;
+desc sample62; #int type의 newcol열 추가
+
+alter table sample62 modify newcol varchar(20);
+desc sample62; #newcol의 자료형을 varchar(20)으로 변경
+
+alter table sample62 change newcol c varchar(20);
+desc sample62; #newcol의 이름을 c로 변경
+
+alter table sample62 drop c;
+desc sample62; #c열 삭제create table sample62(
+  no integer not null,
+  a varchar(30),
+  d date);
+
+desc sample62; #no, a, d열을 가진 테이블을 만
+
+alter table sample62 add newcol integer;
+desc sample62; #int type의 newcol열 추가
+
+alter table sample62 modify newcol varchar(20);
+desc sample62; #newcol의 자료형을 varchar(20)으로 변경
+
+alter table sample62 change newcol c varchar(20);
+desc sample62; #newcol의 이름을 c로 변경
+
+alter table sample62 drop c;
+desc sample62; #c열 삭제
