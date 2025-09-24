@@ -1,0 +1,32 @@
+create table sample631(
+  a integer not null,
+  b integer not null unique,
+  c varchar(30)
+  ); #a열에는 not null제약, b열에는 not null제약과 unique 제약
+
+  create table sample632(
+    no integer not null,
+    sub_no integer not null,
+    name varchar(30),
+    primary key(no, sub_no)
+    ); #no와 sub_no에 not null제약, primiary key로 지정
+
+  create table sample632(
+    no integer not null,
+    sub_no integer not null,
+    name varchar(30),
+    constraint pkey_sample primary key(no, sub_no)
+    ); #constraint 키워드로 테이블 제약에 이름 지정
+
+  alter table sample631 modify c varchar(30) not null; #c열에 not null제약 설정, c열에 null이 존재하면 안됨
+
+  alter table sample631 add constraint pkey_sample631 primary key(a); #기본키 제약 추가
+
+  alter table sample631 modify c varchar(30); #c열의 not null 제약 삭제
+
+  alter table sample631 drop constraint pkey_sample631; 기본키 제약 삭제
+
+creat table sample634(
+  p integer not null,
+  a var char(30),
+  constraint pkey_sample634 primary key(p)
