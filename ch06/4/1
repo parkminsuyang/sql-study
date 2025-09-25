@@ -1,0 +1,5 @@
+create index isample65 on sample62(no); #sample62 테이블의 no열에 isample65라는 인덱스 지정
+drop index isample65 on sample62; #인덱스 삭제
+
+explain select * from sample62 where a='a';
+explain select * from sample62 where no>10;
