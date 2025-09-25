@@ -1,0 +1,9 @@
+create view sample_view_67 as select * from sample54; #뷰 작성
+select * from sample_view_67;
+
+create view sample_view_672(n,v,v2) as
+  select no, a, a*2 from sample54;
+
+select * from sample_view_672 where n=1;
+
+drop view sample_view_67; #뷰 삭제
