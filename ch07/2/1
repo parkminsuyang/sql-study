@@ -1,0 +1,18 @@
+select * from sample72_x;
+select * from sample72_y;
+select * from sample72_x, sample72_y; #from구에 테이블 두 개를 지정해 곱집합 구함
+
+create table 상품(상품코드 char(4) not null, 상품명 varchar(30), 메이커명 varchar(30), 가격 integer, 상품분류 varchar(30), primary key (상품코드)); #상품 테이블 만들기
+create table 재고수(상품코드 char(4), 입고날짜 date, 재고수 integer); #재고수 테이블 만들기
+select * from 상품, 재고수; #곱집합
+select * from 상품, 재고수 where 상품.상품코드=재고수.상품코드; #곱집합에서 상품코드가 같은 것 반환(내부결합)
+select  상품.상품명, 재고수.재고수 from 상품, 재고수  where 상품.상품코드=재고수.상품코드 and 상품.상품분류='식료품'; # 상품, 재고수 테이블에서 상품명, 재고수 열 반환 단, 두 테이블의 상품코드가 같고 상품분류가 식료품일 경우
+select 상품.상품명, 재고수.재고수 from 상품 inner join 재고수 on 상품.상품코드 = 재고수.상품코드 where 상품.상품 분류='식료품';
+
+CREATE TABLE 메이커 ( 메이커코드 CHAR(4) NOT NULL, 메이커명 VARCHAR(30), PRIMARY KEY (메이커코드);
+SELECT S.상품명, M.메이커명 FROM 상품2 S INNER JOIN 메이커 M ON S.메이커코드=M.메이커코드; # 상품 테이블과 메이커 테이블을 내부결합
+
+select s1.상품명, s2.상품명 from 상품 s1 inner join 상품 s2 on s1.상품코드=s2.상품코드; # 별명으로 자기결합
+
+select  상품3.상품명, 재고수.재고수 from 상품3 inner join 재고수 on 상품3.상품코드=재고수.상품코드 where 상품3.상품분류='식료품'; #내부결합에서는 상품3에만 있는 상품코드의 테이블이 제외됨
+select  상품3.상품명, 재고수.재고수 from 상품3 left join 재고수 on 상품3.상품코드=재고수.상품코드 where 상품3.상품분류='식료품'; #외부결합(상품3이 기준)
