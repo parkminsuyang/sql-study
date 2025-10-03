@@ -1,0 +1,10 @@
+select * from sample71_a;
+select * from sample71_b;
+
+select * from sample71_a;
+union
+select * from sample71_b; #sample71_a과 sample71_b를 union
+select a from sample71_a union select b from sample71_b union select age from sample31; #열을 지정해서 union
+
+select a as c from sample71_a union select b as c from sample71_b order by c; #별명으로 열 명을 통일하여 마지막 select 명령을 활용해 order by
+select * from sample71_a union all select * from sample71_b; # 중복 값 중복해서 반환
