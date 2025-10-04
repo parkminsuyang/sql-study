@@ -1,0 +1,9 @@
+insert into 주문 values(4,'2014-03-01',1);
+insert into 주문상품 values(4,'0003',1);
+insert into 주문상품 values(4,'0004',2);
+
+start transaction;
+insert into 주문 values(4,'2014-03-01',1);
+insert into 주문상품 values(4,'0003',1);
+insert into 주문상품 values(4,'0004',2);
+commit; #트랜잭션 사용
